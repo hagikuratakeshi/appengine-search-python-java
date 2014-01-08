@@ -129,7 +129,7 @@ public class TextSearchServlet extends HttpServlet {
         .addField(Field.newBuilder().setName("domain")
             .setText(currentUser.getAuthDomain()))
         .addField(Field.newBuilder().setName("published").setDate(
-            Field.date(new Date())))
+            new Date()))
         .addField(Field.newBuilder().setName("rating")
             .setNumber(rating));
     String tagStr = req.getParameter("tags");
